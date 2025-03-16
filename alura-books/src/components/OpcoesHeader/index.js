@@ -26,6 +26,7 @@ function OpcoesHeader() {
           <li className='opcao'><p>MINHAS ESTANTE</p></li>
           <li className='opcao'><p>FAVORITOS</p></li>
         </ul> */
+        //vasculha o textoOpções e lista todas as opções
         <Opcoes>
          { textoOpcoes.map((texto) => (
           <Opcao><p>{texto}</p></Opcao>
