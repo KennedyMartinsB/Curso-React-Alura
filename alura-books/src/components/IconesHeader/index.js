@@ -20,8 +20,8 @@ function IconesHeader() {
     return (
          /* Pra cada icone da lista vai retornar um elemento */
          <Icones>
-         { icones.map((icone) => (
-           <Icone><img src={icone} alt='icon'></img></Icone>
+         { icones.map((icon) => (
+           <Icone key={icon}><img src={icon} alt='icon'></img></Icone>
          ))}
        </Icones>
     )

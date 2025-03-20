@@ -1,37 +1,30 @@
 import styled from 'styled-components'
 
-const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
+const Opcao = styled.li`
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 5px;
+    cursor: pointer;
+    min-width: 120px;
+`
 
 const Opcoes = styled.ul`
-  display: flex;
-  flex-direction: row;
+    display: flex;
 `
 
-const Opcao = styled.li`
-  min-width: 120px;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
-  padding: 0 5px;
-  cursor: pointer;
-  align-items: center;
-`
+const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
 
 function OpcoesHeader() {
     return (
-        /* <ul className='opcoes'>
-          <li className='opcao'><p>CATEGORIAS</p></li>
-          <li className='opcao'><p>MINHAS ESTANTE</p></li>
-          <li className='opcao'><p>FAVORITOS</p></li>
-        </ul> */
-        //vasculha o textoOpções e lista todas as opções
-        <Opcoes>
-         { textoOpcoes.map((texto) => (
-          <Opcao><p>{texto}</p></Opcao>
-         )) }
-        </Opcoes>
+      <Opcoes>
+            { textoOpcoes.map((texto) => (
+                <Opcao key={texto}><p>{texto}</p></Opcao>
+            ) ) }
+      </Opcoes>
     )
 }
 
