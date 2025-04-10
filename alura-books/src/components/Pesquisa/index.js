@@ -54,7 +54,7 @@ function Pesquisa(params) {
             <Titulo>Já sabe por onde começar?</Titulo>
             <Subtitulo>Encontre seu livro em nossa estante</Subtitulo>
             <Input placeholder="Escreva sua proxima leitura"
-                onChange={event => {
+                onBlur={event => {
 
                     // Pegando texto digitado pelo usuario
                     const textoDigitado = event.target.value
